@@ -67,7 +67,7 @@
         }
         #ket{
             position: fixed;
-            top: 100px;
+            
             left: 460px;
         }
     </style>
@@ -116,6 +116,8 @@
 
 </body>
 <script> 
+    document.getElementById('ket').style.top =( document.getElementById('kotak').offsetTop - 70) + "px"
+    document.getElementById('ket').style.left =( document.getElementById('kotak').offsetLeft + 30) + "px"
     var pemain = "X"
     document.getElementById("ket").innerHTML = "Giliran pemain " + pemain
     function balik(x){
@@ -263,7 +265,7 @@
 
         function menang(a,b,c){
             document.getElementById("ket").innerHTML = "Pemenangnya adalah pemain " + pemain
-            document.getElementById('ket').style.left = 370 + "px"
+            document.getElementById('ket').style.left =( document.getElementById('kotak').offsetLeft - 55) + "px"
             for(i=1;i<10;i++){
                 document.getElementById("b"+i+"d").disabled = "disabled"
             }
